@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div>
@@ -5,7 +7,7 @@ export default function Home() {
         This is a click-based game. All you will need is a mouse to click
         around!
       </p>
-      <button>Get Started</button>
+      <Link href={""}></Link>
     </div>
   );
 }
