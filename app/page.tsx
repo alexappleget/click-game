@@ -1,13 +1,13 @@
-import Link from "next/link";
+import { LinkCustom } from "@/components/LinkCustom/LinkCustom";
 
 export default function Home() {
   return (
-    <div>
+    <section className="border-2 border-black h-screen flex flex-col items-center justify-center gap-14">
       <p>
         This is a click-based game. All you will need is a mouse to click
         around!
       </p>
-      <Link href="/class-choice">Get Started</Link>
-    </div>
+      <LinkCustom href="/class-choice">Get Started</LinkCustom>
+    </section>
   );
 }
