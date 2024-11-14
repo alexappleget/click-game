@@ -1,12 +1,20 @@
 import Image from "next/image";
 import { LinkCustom } from "../LinkCustom/LinkCustom";
 
-const ClassCard = ({ name, imageSrc }: { name: string; imageSrc: string }) => {
+interface ClassProps {
+  classHref: string;
+  description: string;
+  imageSrc: string;
+  name: string;
+}
+
+const ClassCard = ({ classHref, description, imageSrc, name }: ClassProps) => {
   return (
-    <div className="flex flex-1 flex-col items-center p-4 border-2">
-      <h2 className="text-2xl mb-3">{name}</h2>
-      <Image src={imageSrc} alt={`${name} image`} width={200} height={200} />
-      <LinkCustom href="">Choose {name}</LinkCustom>
+    <div className="flex flex-1 flex-col items-center p-2 border-2">
+      <h2 className="text-2xl">{name}</h2>
+      <Image src={imageSrc} alt={`${name} image`} width={150} height={150} />
+      <p className="w-3/4 p-4 mb-10">{description}</p>
+      <LinkCustom href={classHref}>Choose {name}</LinkCustom>
     </div>
   );
 };
